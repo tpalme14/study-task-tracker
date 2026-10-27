@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Task Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Study Task Tracker</h1>
+
+    <div id="storage-warning" class="storage-warning" hidden>
+      Changes may not be saved: your browser's local storage is unavailable or full.
+    </div>
+
+    <form id="add-task-form" class="add-task-form">
+      <div class="field">
+        <label for="title-input">Task title</label>
+        <input id="title-input" name="title" type="text" placeholder="e.g. Read Chapter 4" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="course-input">Course</label>
+        <input id="course-input" name="course" type="text" placeholder="e.g. ITIS 5010" autocomplete="off">
+      </div>
+      <button type="submit">Add Task</button>
+      <p id="form-error" class="form-error" hidden></p>
+    </form>
+
+    <div class="counts">
+      <span id="remaining-count">0 remaining</span>
+      <span id="completed-count">0 completed</span>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty-state" class="empty-state" hidden>No tasks yet. Add one above to get started.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
